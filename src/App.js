@@ -1,5 +1,34 @@
+import { Flex, VStack, Heading } from "@chakra-ui/react";
+import { IconButton } from "@chakra-ui/react";
+import { useColorMode } from "@chakra-ui/color-mode";
+
+import {
+  FaSun,
+  FaMoon,
+  FaInstagram,
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
+
 function App() {
-  return <div className="App">OK APP</div>;
+  const { colorMode, toggleColorMode } = useColorMode();
+  const isDark = colorMode == "dark";
+
+  return (
+    <VStack p="5">
+      <Flex w="100%">
+        <Heading ml="8" size="md" fontWeight="semibold" color="cyan.400">
+          OK-Folio
+        </Heading>
+      </Flex>
+      <IconButton
+        ml={8}
+        icon={isDark ? <FaSun /> : <FaMoon />}
+        isRound="true"
+        onClick={toggleColorMode}
+      ></IconButton>
+    </VStack>
+  );
 }
 
 export default App;
