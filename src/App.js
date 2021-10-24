@@ -19,7 +19,7 @@ function App() {
 
   return (
     <VStack p="5">
-      <Flex w="100%">
+      <Flex w="100%" flexWrap="wrap">
         <Heading ml="8" size="md" fontWeight="semibold" color="cyan.400">
           OK-Folio
         </Heading>
@@ -49,10 +49,10 @@ function App() {
           isRound="true"
           onClick={toggleColorMode}
         ></IconButton>
-        <Header />
         <Social />
         <Profile />
       </Flex>
+      <Header />
     </VStack>
   );
 }
