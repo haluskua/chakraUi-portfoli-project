@@ -44,15 +44,15 @@ function App() {
           onClick={toggleColorMode}
         ></IconButton>
         <IconButton
-          ml={8}
+          ml={6}
           icon={isDark ? <FaSun /> : <FaMoon />}
           isRound="true"
           onClick={toggleColorMode}
         ></IconButton>
-        <Social />
-        <Profile />
       </Flex>
       <Header />
+      <Social />
+      <Profile />
     </VStack>
   );
 }
